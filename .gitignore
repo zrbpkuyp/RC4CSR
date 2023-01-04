@@ -1,0 +1,17 @@
+# PROJECT SPECIFIC #
+# IDE configs #
+.vscode/
+.idea/
+migrations/
+test_data/
+logstore/
+* old.*
+*_old.*
+*fake.*
+*backup.*
+*backup/
+*local/
+
+# Python #
+__pycache__/
+*.py[cod]
