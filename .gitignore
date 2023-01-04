@@ -15,3 +15,9 @@ logstore/
 # Python #
 __pycache__/
 *.py[cod]
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
