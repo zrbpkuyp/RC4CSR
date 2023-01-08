@@ -1,6 +1,6 @@
 # The main structure of this project
-functionalities are divided into app, recom, discuss and write  
-## app
+functionalities are divided into System, Recommendation, Discussion and Writing
+## System
 basic models & main pages  
 ### basic models
 user  
@@ -11,14 +11,14 @@ pencraft
 ### main pages
 welcome & log in  
 user page  
-## recom
+## Recommendation
 offer recommendations to users based on their behaviors and other info  
 recieving results from model ML  
-## discuss
+## Discussion
 discussion zone & groups  
 ### discussion zone
 contain groups of different topics or books  
 ### group
 members of the group can post comments about its topic or book  
-## write
+## Writing
 post pencrafts and comment pencrafts  
