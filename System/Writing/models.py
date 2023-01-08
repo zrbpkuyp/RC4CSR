@@ -1,4 +1,5 @@
 from django.db import models
+# from System.models import PlatformUser
 
 # Create your models here.
 
@@ -14,9 +15,9 @@ class Pencraft(models.Model):
     """
     topic = models.CharField(max_length=100)
     pub_date = models.DateField('date published')
-    chap_num = models.IntegerField(max_length=1000)
+    chap_num = models.IntegerField(default=0)
     # tags = 
-    # author = 
+    # author : PlatformUser = models.ForeignKey(PlatformUser,on_delete=models.CASCADE)
     # text = 
     def __str__(self) -> str:
         return self.topic
