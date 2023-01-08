@@ -3,11 +3,10 @@ functionalities are divided into System, Recommendation, Discussion and Writing
 ## System
 basic models & main pages  
 ### basic models
-user  
-book  
-group  
-topic  
-pencraft  
+PlatformUser  
+Book  
+Group  
+Topic    
 ### main pages
 welcome & log in  
 user page  
@@ -22,3 +21,5 @@ contain groups of different topics or books
 members of the group can post comments about its topic or book  
 ## Writing
 post pencrafts and comment pencrafts  
+### models
+Pencraft  
