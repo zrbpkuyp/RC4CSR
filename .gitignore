@@ -1,0 +1,24 @@
+# PROJECT SPECIFIC #
+# IDE configs #
+.vscode/
+.idea/
+migrations/
+test_data/
+logstore/
+* old.*
+*_old.*
+*fake.*
+*backup.*
+*backup/
+*local/
+.DS_store
+
+# Python #
+__pycache__/
+*.py[cod]
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
