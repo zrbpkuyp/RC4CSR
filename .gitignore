@@ -11,6 +11,7 @@ logstore/
 *backup.*
 *backup/
 *local/
+.DS_store
 
 # Python #
 __pycache__/
