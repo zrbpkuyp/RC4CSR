@@ -21,7 +21,6 @@ class Pencraft(models.Model):
     description = models.CharField(max_length=200)
     # tags = 
     # author : PlatformUser = models.ForeignKey(PlatformUser,on_delete=models.CASCADE)
-    # text = 
     def __str__(self) -> str:
         return self.topic
 
