@@ -19,7 +19,7 @@ class PlatformUser(models.Model):
     
     uid = models.OneToOneField(to=User, on_delete=models.CASCADE)
 
-    nickname = models.CharField("昵称", blank=True, null=True, unique=True, max_length=20)
+    nickname = models.CharField("昵称", null=True, unique=True, max_length=20)
     class Gender(models.IntegerChoices):
         MALE = (0, "男")
         FEMALE = (1, "女")

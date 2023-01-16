@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>用户页面</title>
+    </head>
+    <body>
+        {% if platform_user.nickname %}
+        <h1>You're looking at {{ platform_user.nickname }}</h1>
+        {% endif %}
+    </body>
+</html>
