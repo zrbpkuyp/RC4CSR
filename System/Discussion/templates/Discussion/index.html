@@ -1,0 +1,11 @@
+<h1>Welcome to the discussion zone!</h1>
+<h1>Feel free to visit the groups you like!</h1>
+{% if latest_group_list %}
+    <ul>
+    {% for group in latest_group_list %}
+        <li><a href="/discussion/{{ group.id }}/">{{ group.groupName }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No groups yet.</p>
+{% endif %}
