@@ -8,7 +8,9 @@ Book
 Group  
 Topic    
 ### main pages
-welcome & log in  
+welcome（TODO)
+register
+login
 user page  
 ## Recommendation
 offer recommendations to users based on their behaviors and other info  

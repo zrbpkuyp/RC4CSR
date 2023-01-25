@@ -2,13 +2,18 @@ from django.shortcuts import render
 from django.http import HttpRequest, HttpResponseRedirect
 from .models import PlatformUser
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.db.utils import IntegrityError
 from time import sleep
+from django.shortcuts import redirect
 
 
 # Create your views here.
 def UserRegister(request: HttpRequest):
+    """ User Register Function
+    TODO: redirect after being registered
+    """
     if request.method == "POST" and request.POST:
         name = request.POST["name"] # username
         password1 = request.POST["password1"] # password1
@@ -50,21 +55,39 @@ def UserRegister(request: HttpRequest):
         return render(request, "register.html")
 
 def UserLogin(request: HttpRequest):
+    """ User Login Function
+
+    Edit: add "auth.login(request, user)"
+    """
     if request.method == "POST" and request.POST:
         username = request.POST["username"]
         password = request.POST["password"]
         user = auth.authenticate(username=username, password=password) # Get user by username and password
         if user:
-            return HttpResponseRedirect("/%s/" % user.get_username()) # Redirect to the user's page
+            auth.login(request, user)
+            return redirect("/recommendation/%s/" % user.get_username()) # Redirect to the user's page
         else:
             err_msg = "用户名或密码错误！"
             return render(request, "login.html", locals())
     else:
         return render(request, "login.html", locals())
 
+def UserLogout(request: HttpRequest):
+    """ User Logout Function
+    Modify the login status and redirect to the login page.
+    """
+    auth.logout(request)
+    return HttpResponseRedirect("/recommendation/login/")
+
+@login_required(redirect_field_name="login")
 def UserPage(request: HttpRequest, username: str):
+    """ User info Page Function
+    Any User can visit if log in.
+    """
     user = User.objects.get(username=username)
     platform_user = PlatformUser.objects.get(uid=user)
+    if request.method == "POST" and request.POST:
+        return UserLogout(request)
     return render(request, "user_page.html", locals())
     
 
