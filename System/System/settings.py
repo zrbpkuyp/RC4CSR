@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
     "Recommendation.apps.RecommendationConfig",
+    "Discussion.apps.DiscussionConfig",
     'Writing.apps.WritingConfig',
 ]
 

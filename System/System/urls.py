@@ -19,6 +19,7 @@ import Recommendation.views as views
 
 urlpatterns = [
     path('writing/', include('Writing.urls')),
+    path('discussion/', include('Discussion.urls')),
     path("admin/", admin.site.urls),
     path("recommendation/", include('Recommendation.urls')),
 ]
