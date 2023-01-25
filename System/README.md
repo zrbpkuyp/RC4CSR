@@ -1,6 +1,20 @@
 # The main structure of this project
 functionalities are divided into System, Recommendation, Discussion and Writing
 ## System
+<<<<<<< HEAD
+basic models & main pages  
+### basic models
+PlatformUser  
+Book  
+Group  
+Topic    
+### main pages
+welcome（TODO)
+register
+login
+user page  
+=======
+>>>>>>> refs/remotes/upstream/master
 ## Recommendation
 offer recommendations to users based on their behaviors and other info  
 recieving results from model ML

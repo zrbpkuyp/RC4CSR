@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'Writing.apps.WritingConfig',
 ]
 
+LOGIN_URL = "/recommendation/login/"
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
