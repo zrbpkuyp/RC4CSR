@@ -1,0 +1,14 @@
+<h1>{{platform_user.nickname}}</h1>
+<h2>Here are your pencrafts: <h3>
+{% if pencraft_list %}
+    <ul>
+    {% for pencraft in pencraft_list %}
+        <!-- <li><a href="/writing/{{ pencraft.id }}/">{{ pencraft.topic }}</a></li> hard coded -->
+        <li><a href="{% url 'pencraft' pencraft.id %}">{{ pencraft.topic }}</a></li>
+        <h3>{{pencraft.pub_date}}</h3>
+        {{pencraft.description}}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No pencrafts are available.</p>
+{% endif %}
