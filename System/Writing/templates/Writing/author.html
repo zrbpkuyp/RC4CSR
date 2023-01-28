@@ -1,5 +1,5 @@
 <h1>{{platform_user.nickname}}</h1>
-<h2>Here are your pencrafts: <h3>
+<h2>Here are your pencrafts: </h2>
 {% if pencraft_list %}
     <ul>
     {% for pencraft in pencraft_list %}
@@ -12,3 +12,16 @@
 {% else %}
     <p>No pencrafts are available.</p>
 {% endif %}
+<h2>Start your new pencraft!</h2>
+{% if err_msg %}
+        <div>{{ err_msg }}</div>
+        {% endif %}
+<form method="post">{% csrf_token %}
+    Topic(in 100 chars)<input type="text" name="topic"><br>
+    Description(in 200 chars)<input type="text" name="description"><br>
+
+    <input type="submit" value="submit">
+</form>
+
+<h2>Other functions</h2>
+<li><a href="/writing/author/{{ user.username }}/update/">Update one of your previous work</a></li>

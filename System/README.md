@@ -25,7 +25,7 @@ displaying groups
 ### web page: Discussion.detail  
 showing discussions after entering a group  
 ## Writing
-post pencrafts and comment pencrafts  
+post pencrafts and comment pencrafts   
 ### model: Pencraft
 main body of a pencraft created by a platformUser  
 containing title(topic), description and chapters  
@@ -37,3 +37,9 @@ displaying pencrafts
 showing title, author, chapters and other information about a pencraft  
 ### web page: Writing.chapter
 showing content of a chapter  
+### web page: Writing.author
+homepage of an author(also platformuser)  
+showing previous pencrafts from this author  
+author can start a new pencraft in this page  
+### web page: Writing.update
+author can chooose one of his/her previous pencrafts and update a new chapter  
