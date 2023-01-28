@@ -37,13 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
+    "Account.apps.AccountConfig",
     "Recommendation.apps.RecommendationConfig",
     "Discussion.apps.DiscussionConfig",
     'Writing.apps.WritingConfig',
 ]
 
-LOGIN_URL = "/recommendation/login/"
+LOGIN_URL = "/account/login/"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

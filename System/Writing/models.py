@@ -1,5 +1,5 @@
 from django.db import models
-from Recommendation.models import PlatformUser
+from Account.models import PlatformUser
 
 # Create your models here.
 

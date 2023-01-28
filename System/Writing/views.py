@@ -4,7 +4,7 @@ from django.http import HttpResponse, Http404
 from django.contrib.auth.models import User
 
 from .models import Pencraft, Chapter
-from Recommendation.models import PlatformUser
+from Account.models import PlatformUser
 
 @login_required(redirect_field_name='login')
 def index(request):
