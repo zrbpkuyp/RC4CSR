@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import Group
-
-from Recommendation.models import PlatformUser, Book
+from Account.models import PlatformUser
+from Recommendation.models import Book
 
 # Create your models here.
 
@@ -26,16 +26,16 @@ class DiscGroup(models.Model):
     disc_center = models.ForeignKey('Recommendation.Book', on_delete=models.CASCADE)
     found_time = models.DateTimeField("创建时间")
     
-    founder = models.ForeignKey('Recommendation.PlatformUser', on_delete=models.CASCADE, related_name='founder')
-    member1 = models.ForeignKey('Recommendation.PlatformUser', on_delete=models.CASCADE, 
+    founder = models.ForeignKey('Account.PlatformUser', on_delete=models.CASCADE, related_name='founder')
+    member1 = models.ForeignKey('Account.PlatformUser', on_delete=models.CASCADE, 
                                 related_name='member1', default=None, null=True, blank=True)
-    member2 = models.ForeignKey('Recommendation.PlatformUser', on_delete=models.CASCADE, 
+    member2 = models.ForeignKey('Account.PlatformUser', on_delete=models.CASCADE, 
                                 related_name='member2', default=None, null=True, blank=True)
-    member3 = models.ForeignKey('Recommendation.PlatformUser', on_delete=models.CASCADE, 
+    member3 = models.ForeignKey('Account.PlatformUser', on_delete=models.CASCADE, 
                                 related_name='member3', default=None, null=True, blank=True)
-    member4 = models.ForeignKey('Recommendation.PlatformUser', on_delete=models.CASCADE, 
+    member4 = models.ForeignKey('Account.PlatformUser', on_delete=models.CASCADE, 
                                 related_name='member4', default=None, null=True, blank=True)
-    member5 = models.ForeignKey('Recommendation.PlatformUser', on_delete=models.CASCADE, 
+    member5 = models.ForeignKey('Account.PlatformUser', on_delete=models.CASCADE, 
                                 related_name='member5', default=None, null=True, blank=True)
     
     description = models.CharField(max_length=200)
@@ -52,7 +52,7 @@ class DiscRecord(models.Model):
         
     summary = models.CharField(max_length=50, default=None)
     pub_time = models.DateTimeField("发布时间")
-    publisher = models.ForeignKey("Recommendation.PlatformUser", on_delete=models.CASCADE)
+    publisher = models.ForeignKey("Account.PlatformUser", on_delete=models.CASCADE)
     reply_to = models.ForeignKey("DiscRecord", on_delete=models.CASCADE, default=None, null=True, blank=True)
     belong_to = models.ForeignKey("DiscGroup", on_delete=models.CASCADE)
     content = models.CharField(max_length=200)

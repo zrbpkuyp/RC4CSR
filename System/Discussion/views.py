@@ -3,8 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponseRedirect
 import datetime
 
-from Recommendation.models import PlatformUser, Book, PlatformUserManager
-
+from Account.models import PlatformUser, PlatformUserManager
+from Recommendation.models import Book
 from .models import DiscGroup, DiscRecord
 
 # Create your views here.
