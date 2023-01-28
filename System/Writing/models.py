@@ -1,5 +1,5 @@
 from django.db import models
-# from System.models import PlatformUser
+from Recommendation.models import PlatformUser
 
 # Create your models here.
 
@@ -14,13 +14,15 @@ class Pencraft(models.Model):
     :param models: To be completed
     :type models: To be completed
     """
-    # pid = 
     topic = models.CharField(max_length=100)
     pub_date = models.DateField('date published')
     chap_num = models.IntegerField(default=0)
     description = models.CharField(max_length=200)
     # tags = 
-    # author : PlatformUser = models.ForeignKey(PlatformUser,on_delete=models.CASCADE)
+    author : PlatformUser = models.ForeignKey(
+        PlatformUser, on_delete=models.CASCADE, 
+        related_name='author', default=None, null=True, blank=True
+        )
     def __str__(self) -> str:
         return self.topic
 
@@ -31,8 +33,7 @@ class Chapter(models.Model):
     :param models: _description_
     :type models: _type_
     """
-    
-    # cid = 
+
     collection = models.ForeignKey(
         'Pencraft',
         default=None,
