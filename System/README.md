@@ -5,10 +5,16 @@ welcome（TODO)
 register  
 login  
 user page  
+## Account
+### model: PlatformUser
+
+### web page: Account.register
+### web page: Account.login
+### web page: Account.user_page
+
 ## Recommendation
 offer recommendations to users based on their behaviors and other info  
 recieving results from model ML  
-### model: PlatformUser
 ### model: Book  
 ### model: Topic
 ## Discussion
@@ -24,6 +30,8 @@ allowing group members to post comments, reply to other comments and give likes
 displaying groups  
 ### web page: Discussion.detail  
 showing discussions after entering a group  
+### web page: Discussion.register
+register a discgroup
 ## Writing
 post pencrafts and comment pencrafts   
 ### model: Pencraft
