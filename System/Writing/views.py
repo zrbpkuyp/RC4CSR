@@ -60,6 +60,7 @@ def update(request, username):
         text = request.POST["text"]
         try:
             collection_update.chap_num += 1
+            collection_update.save()
             chap_new = Chapter.objects.create(
                 collection=collection_update,
                 order_num=collection_update.chap_num,
