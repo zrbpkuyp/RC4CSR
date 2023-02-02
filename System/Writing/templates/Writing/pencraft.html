@@ -1,0 +1,6 @@
+<h1>{{ pencraft.topic }}</h1>
+<ul>
+{% for chapter in chapter_set %}
+    <li><a href="/writing/{{ pencraft.id }}/{{ chapter.id }}/">{{ chapter.chap_name }}</a></li>
+{% endfor %}
+</ul>

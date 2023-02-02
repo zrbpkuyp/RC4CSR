@@ -1,0 +1,19 @@
+<h1>{{ group.groupName }}</h1>
+<ul>
+    {% if err_msg %}
+        <div>{{ err_msg }}</div>
+        {% endif %}
+{% for record in records %}
+    <h1>{{ record.summary }}</h1>
+    <li>publisher: {{ record.publisher }}<li>
+    <h2>{{ record.content }}</h2>
+    <li>likes: {{ record.likes }}</li>
+{% endfor %}
+<form method="post">{% csrf_token %}
+    <h1>新建评论</h1>
+    总结（50字内）：<input type="text" name="summary"><br>
+    内容（200字内）：<input type="text" name="content"><br>
+
+    <input type="submit" value="提交">
+</form>
+</ul>

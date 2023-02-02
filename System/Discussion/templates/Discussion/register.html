@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>讨论组注册页面</title>
+    </head>
+    <body>
+        <h1>讨论组注册</h1>
+        {% if err_msg %}
+        <div>{{ err_msg }}</div>
+        {% endif %}
+        <form method="post">{% csrf_token %}
+            组名：<input type="text" name="name"><br>
+            中心书目: <input type="text" name="book"><br>
+            发起者: <input type="text" name="founder"><br>
+            成员一（选填）:  <input type="text" name="member1"><br>
+            成员二（选填）:  <input type="text" name="member2"><br>
+            成员三（选填）:  <input type="text" name="member3"><br>
+            成员四（选填）:  <input type="text" name="member4"><br>
+            成员五（选填）:  <input type="text" name="member5"><br>
+            描述：<input type="text" name="description"><br>
+            <input type="submit" value="提交">
+        </form>
+    </body>
+</html>
